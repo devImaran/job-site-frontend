@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
+    
+  <!-- CSS Files -->
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+
+  <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+    <!--   Core JS Files   -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script>
+var breakCards = true;
+var searchVisible = 0;
+var transparent = true;
+var transparentDemo = true;
+var fixedTop = false;
+var mobile_menu_visible = 0,
+  mobile_menu_initialized = false,
+  toggle_initialized = false,
+  bootstrap_nav_initialized = false;
+
+$(document).ready(function() {
+ $('body').bootstrapMaterialDesign();
+  $sidebar = $('.sidebar');
+  md.initSidebarsCheck();
+  window_width = $(window).width();
+});
+
+$(document).on('click', '.navb-toggler', function() {
+  $toggle = $(this);
+  if (mobile_menu_visible == 1) {
+    $('html').removeClass('nav-open');
+    $('.close-layer').remove();
+    setTimeout(function() {
+      $toggle.removeClass('toggled');
+    }, 400);
+    mobile_menu_visible = 0;
+  } else {
+    setTimeout(function() {
+      $toggle.addClass('toggled');
+    }, 430);
+    var $layer = $('<div class="close-layer"></div>');
+    if ($('body').find('.main-panel').length != 0) {
+      $layer.appendTo(".main-panel");
+    } else if (($('body').hasClass('off-canvas-sidebar'))) {
+      $layer.appendTo(".wrapper-full-page");
+    }
+    setTimeout(function() {
+      $layer.addClass('visible');
+    }, 100);
+
+    $layer.click(function() {
+      $('html').removeClass('nav-open');
+      mobile_menu_visible = 0;
+      $layer.removeClass('visible');
+      setTimeout(function() {
+        $layer.remove();
+        $toggle.removeClass('toggled');
+      }, 400);
+    });
+
+    $('html').addClass('nav-open');
+    mobile_menu_visible = 1;
+    }
+});
+
+md = {
+  misc: {
+    navbar_menu_visible: 0,
+    active_collapse: true,
+    disabled_collapse_init: 0,
+  },
+  
+  initMinimizeSidebar: function() {
+  $('#minimizeSidebar').click(function() {
+      var $btn = $(this);
+    if (md.misc.sidebar_mini_active == true) {
+        $('body').removeClass('sidebar-mini');
+        md.misc.sidebar_mini_active = false;
+      } else {
+        $('body').addClass('sidebar-mini');
+        md.misc.sidebar_mini_active = true;
+      }
+  });
+  },
+    initRightMenu: debounce(function() {
+    $sidebar_wrapper = $('.sidebar-wrapper');
+
+    if (!mobile_menu_initialized) {
+      $navbar = $('nav').find('.navbar-collapse').children('.navbar-nav');
+      mobile_menu_content = '';
+      nav_content = $navbar.html();
+      nav_content = '<ul class="nav navbar-nav nav-mobile-menu">' + nav_content + '</ul>';
+      $sidebar_nav = $sidebar_wrapper.find(' > .nav');
+      $nav_content = $(nav_content);
+      $nav_content.insertBefore($sidebar_nav);
+      $navbar_form.insertBefore($nav_content);
+      $(".sidebar-wrapper .dropdown .dropdown-menu > li > a").click(function(event) {
+        event.stopPropagation();
+      });
+      mobile_menu_initialized = true;
+    } else {
+      if ($(window).width() > 991) {
+        $sidebar_wrapper.find('.navbar-form').remove();
+        $sidebar_wrapper.find('.nav-mobile-menu').remove();
+        mobile_menu_initialized = false;
+      }
+    }
+  }, 200),
+};
+
+    </script>
+</body>
+</html>
+
+</html>

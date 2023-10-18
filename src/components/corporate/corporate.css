@@ -1,0 +1,107 @@
+#corp{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poiret One', cursive;
+  background-image: linear-gradient(to right, #62448F ,#937AFC) ;
+}
+
+.box h2{
+  text-align: center;
+    margin-bottom: 10px;
+    color: #555;
+    font-weight: 900;
+}
+
+.box{
+  width: 500px;
+  height: 500px;
+  background: linen;
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.hrarea form ,.adminlogin form{
+  margin-top: 50px;
+}
+.hrarea{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 400px;
+  padding: 0 20px;
+  transition: 0.5s;
+
+}
+.adminlogin{
+  position: absolute;
+  bottom: 0;
+  left: 101%;
+  width: 100%;
+  height: 400px;
+  padding: 0 20px;
+  transition: 0.5s;
+
+}
+
+.forget{
+  color: orangered !important;
+  font-weight: 900;
+  font-family: 'Pacifico', cursive !important;
+}
+
+.togg-btn{
+  -webkit-appearance: none;
+  width: 150px;
+  height: 40px;
+  position: absolute;
+  top: 35px;
+  left: calc(50% - 70px);
+  border-radius: 70px;
+  outline: none;
+}
+.togg-btn:before{
+  content: 'ADMIN';
+  font-weight: 900;
+  color: azure;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  background-image: linear-gradient(to right, #62448F ,#937AFC) ;
+  border-radius: 70px;
+  display: grid;
+  place-items: center;
+
+}
+
+.togg-btn:checked:before{
+  content: 'HR';
+  left: 50%;
+}
+.togg-btn:checked + .hrarea{
+  left: 101%;
+}
+.togg-btn:checked + .hrarea + .adminlogin{
+  left: 0%;
+}
+
+.hrarea .btn-primary,.adminlogin .btn-primary{
+  float: right;
+  border: none;
+  width: 120px;
+  background: #62448F;
+  font-weight: 600;
+  color: #fff;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 1.5rem;
+}
+
+.hrarea .btn-primary:hover,.adminlogin .btn-primary:hover{
+  background: #55B26B;
+  color: #fff;
+}

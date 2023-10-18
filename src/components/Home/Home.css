@@ -1,0 +1,159 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.head{
+  font-family: cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+ 
+}
+
+.heading{
+  
+  color: whitesmoke;
+  font-size: 4rem;
+  position: relative;
+  text-transform: uppercase;
+  width: 0ch;
+  white-space: nowrap;
+  animation: slide 6s linear infinite ;
+  overflow: hidden;
+ 
+}
+.slider_title{
+  color:#6383FB;
+  text-align: center;
+  padding: 20px 0;
+}
+section .showcase_area{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  background:#290058;
+}
+section .showcase_area .text_side h6{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 50%;
+  flex-direction: column;
+  color: #eeedf1;
+  font-size: 4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+
+}
+section .showcase_area .text_side p{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+  font-size: 1rem;
+  font-weight: normal;
+  color: #d10063;
+}
+section .showcase_area .picture_area{
+ 
+  flex-basis: 50%;
+ height: 100%;
+
+}
+section .showcase_area .picture_area img{
+ height: 90%;
+ width: 90%;
+}
+section .showcase_area .text_side .reg{
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+section .showcase_area .text_side .reg .link_btn{
+  padding: 8px 50px;
+  color: white;
+  font-size: 1.2rem;
+  background:#0071e0;
+  border-radius: 5px;
+  transition: 0.5s ease;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+  font-weight: normal;
+  }
+  section .showcase_area .text_side .reg .link_btn:hover{
+  
+  background:#ff0066;
+  
+  }
+  .browse_job_area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+  }
+
+
+
+/* .heading::before{
+   content: "Welcome To Job Portol";
+   width: 100%;
+   white-space: nowrap;
+   color: #2ed573;
+   position: absolute;
+   top: 0;
+   left: 0;
+   -webkit-animation: slide 3s linear infinite;
+   overflow: hidden;
+   
+} */
+
+@media only screen and (max-width: 770px) {
+  section .showcase_area{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  section .showcase_area .picture_area img {
+    height: 80%;
+    
+}
+}
+@media only screen and (max-width: 600px) {
+  .heading {
+    font-size: 4rem ;
+    margin-top: -20px;
+  }
+  section .showcase_area .text_side {
+    
+    font-size: 2rem;
+    margin-top: 80px;
+  }
+  .contact{
+    height: 100%;
+  }
+  
+}
+
+@keyframes slide{
+  0%{
+      width: 0ch;
+  }
+  75%{
+      width: 67%;
+  }
+  100%{
+      width :0ch;
+  }
+  
+  
+}

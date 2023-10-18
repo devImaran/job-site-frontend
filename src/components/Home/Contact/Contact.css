@@ -1,0 +1,165 @@
+
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    width: 100%; 
+    background: #290058;
+    height: 100%;
+    box-shadow: 0 0 10px #28014d;
+ 
+}
+.contact .container .col-md-6{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    
+}
+.contact .container .col-md-6 .cont_area,
+.contact .container .col-md-6 .another_area{
+    width: 100%;
+    padding: 20px;
+    height: 400px;
+    background: #320565;
+
+    
+}
+.contact .container .col-md-6 .another_area{
+   
+    background: #ffffff;
+    color: #320565;
+    position: relative;
+    background-image: url('../../../images/con2.svg');
+    background-size:60%;
+    background-position:bottom;
+    background-repeat: no-repeat;
+}
+
+.contact .container .col-md-6 .cont_area .title,
+.contact .container .col-md-6 .another_area .title{
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  flex-direction: row;
+  gap:0 40px;
+  padding: 10px 0;
+  margin-bottom:50px;
+  z-index: 10;
+}
+.contact .container .col-md-6 .cont_area .title img,
+.contact .container .col-md-6 .another_area .title img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  filter: invert(1);
+  position: relative;
+}
+.contact .container .col-md-6 .cont_area .title h3
+{
+    text-transform: uppercase;
+  color: #d1c8dd;
+  position: relative;
+}
+.contact .container .col-md-6 .cont_area .title h3::after,
+.contact .container .col-md-6 .another_area .title h3::after{
+    content: '';
+    top:0;
+    left:-10%;
+    position: absolute;
+    width:2px;
+    height: 80%;
+    background:#d1c8dd;
+    margin: 7px 0;
+}
+.contact .container .col-md-6 .cont_area form{
+width: 100%;
+    
+}
+.contact .container .col-md-6 .cont_area form .line{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+
+}
+.contact .container .col-md-6 .cont_area form .line input{
+    width: 100%;
+
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 2px solid #562c8b;
+    text-transform: capitalize;
+    font-weight: 400;
+    padding: 10px;
+}
+.contact .container .col-md-6 .cont_area form .line button{
+    border:none;
+    outline: none;
+    background: #0079e3;
+    padding: 5px 30px;
+    border-radius: 20px;
+    margin: 20px 10px;
+    color:#d5e9fa;
+}
+.contact .container .col-md-6 .cont_area form .line button img{
+   width: 20px;
+   height: 20px;
+   filter: invert(1);
+
+}
+.contact .container .col-md-6 .another_area .title {
+    z-index: 12;
+}
+.contact .container .col-md-6 .another_area .title h3{
+    color:#562c8b ;
+     text-transform: uppercase;
+
+    z-index: 11;
+    position: relative;
+}
+.contact .container .col-md-6 .another_area form .line {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+   flex-wrap: wrap;
+  
+
+}
+.contact .container .col-md-6 .another_area form .line .both{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-bottom: 20px;
+}
+.contact .container .col-md-6 .another_area form .line .both img{
+    width: 20px ;
+    height: 20px;
+    margin:0 10px;
+  
+}
+.contact .container .col-md-6 .another_area form .line .both h3{
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.contact .container .col-md-6 .another_area .title img{
+    filter: none;
+}
+
+@media (max-width: 770px) {
+
+  .contact .container .col-md-6 .cont_area, .contact .container .col-md-6 .another_area {
+    width: 100%;
+   height: auto;
+   margin-left: 25px;
+
+  }
+  }

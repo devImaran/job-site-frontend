@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#nav_navigation{
+    font-size: 1.2rem;
+    color: #c5cbcd;
+    margin-left: 30px;
+    /* border: 2px solid red; */
+    padding: 5px 20px;
+    border-radius: 20px;
+    background: #290058;
+    transition: 0.5s;
+}
+#nav_navigation:hover{
+    transform: scale(1.2);
+}
+@media only screen and (max-width: 770px) {
+    #nav_navigation{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       width: 100%;
+        background: none;
+    }
+  }

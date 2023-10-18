@@ -1,0 +1,32 @@
+.form-gap {
+    padding-top: 70px;
+    
+}
+.row{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.panel{
+    padding: 20px;
+    
+}
+
+#forget{
+    background: linear-gradient(to right, #62448F ,#937AFC) ;
+    height: 100vh;
+
+}
+
+.panel{
+    background: whitesmoke;
+    height: 450px;
+    border-radius: 25px;
+}
+
+.panel-body{
+    font-family: 'Poiret One', cursive;;
+}
